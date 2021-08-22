@@ -1,0 +1,28 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+:root {
+    --font: 'IBM Plex Mono', sand-serif;
+    --background-color: #696969;
+    --font-color: #013220;
+  }
+  .btn-lg {
+    width: 150px;
+    margin-bottom: 10px;
+  }
+  h1 {
+    margin-bottom: 30px;
+  }
+  .change-color {
+    background-color: var(--background-color);
+    color: var(--font-color);
+  }
+  
+  .change-color-button {
+    background-color: transparent;
+    color: var(--font-color);
+  }
