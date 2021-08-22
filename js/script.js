@@ -109,6 +109,7 @@ let pokemonRepository = (function () {
     modalContent.appendChild(modalBody);
     modalContent.appendChild(modalFooter);
   };
+
   return {
     add: add,
     getAll: getAll,
@@ -120,6 +121,7 @@ let pokemonRepository = (function () {
     showDetails: showDetails,
   };
 })();
+
 pokemonRepository.loadList().then(function() {
   // data is being loaded!
   pokemonRepository.getAll().forEach(function(pokemon) {
