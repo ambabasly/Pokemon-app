@@ -15,6 +15,7 @@ let pokemonRepository = (function () {
       console.log("pokemon is not correct");
     }
   }
+  
   //returning pokemon list
   function getAll() {
     return pokemonList;
@@ -23,9 +24,8 @@ let pokemonRepository = (function () {
   function remove(start, number) {
     document.write(`<br><p>${pokedex[start].name}
       </p><p> </p><br>`);
-    
-    pokemonList.splice(start, number);
   }
+
   function addListItem(pokemon) {
     let list = document.querySelector('.pokemon-list');
     let listItem = document.createElement('li');
@@ -77,12 +77,14 @@ let pokemonRepository = (function () {
     console.error(e);
   });
   };
+
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function() {
       showModal(pokemon);
       
     });
   };
+
   //Modal
   function showModal(pokemon) {
     console.log('showModal is running');
@@ -141,7 +143,6 @@ let pokemonRepository = (function () {
   return {
     add: add,
     getAll: getAll,
-    remove: remove,
     addListItem: addListItem,
     loadList: loadList,
     loadDetils: loadDetails,
@@ -156,6 +157,7 @@ pokemonRepository.loadList().then(function() {
     pokemonRepository.addListItem(pokemon);
   });
 });
+
 function changeColor() {
   let body = document.querySelector('body');
   body.classList.toggle('change-color');
