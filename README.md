@@ -4,6 +4,10 @@
 
 ## Built With
 - JAVASCRIPT
+- 
+##https://ambabasly.github.io/Pokemon-app/
+
+<img width="1440" alt="Screenshot 2021-10-14 at 23 32 51" src="https://user-images.githubusercontent.com/88083504/137398615-716483c9-bb6b-4e58-8693-61306353de73.png">
 
 ## Getting Started
 **The purpose of this project is to create a simple application that lists a variety of Pokemon along with their individual attributes, pulling information directly from an external API.**
