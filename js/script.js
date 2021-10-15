@@ -7,12 +7,12 @@ let pokemonRepository = (function () {
   // push pokemon
   function add(pokemon) {
     if (
-      typeof pokemon === "object" &&
-      "name" in pokemon) {
+      typeof pokemon === 'object' &&
+      'name' in pokemon) {
       pokemonList.push(pokemon);
     } 
     else {
-      console.log("pokemon is not correct");
+      console.log('pokemon is not correct');
     }
   }
   
@@ -21,8 +21,8 @@ let pokemonRepository = (function () {
     return pokemonList;
   }
   
-  function remove(start, number) {
-    document.write(`<br><p>${pokedex[start].name}
+ function remove(start ) {
+    document.write(`<br><p>${[start].name}
       </p><p> </p><br>`);
   }
 
@@ -34,16 +34,16 @@ let pokemonRepository = (function () {
     let button = document.createElement('button');
     button.innerText = pokemon.name;
     button.classList.add('btn-lg', 'btn-primary');
-    button.dataset.target = "#exampleModal";
-    button.dataset.toggle = "modal";
+    button.dataset.target = '#exampleModal';
+    button.dataset.toggle = 'modal';
     listItem.appendChild(button);
     list.appendChild(listItem);
 
   //Event listener on a click of a button
-    button.addEventListener('click', function(event) {
+    button.addEventListener('click', function() {
       showDetails(pokemon);
     });
-  };
+  }
 
   //Fetching pokemon list from API
   function loadList() {
@@ -76,14 +76,14 @@ let pokemonRepository = (function () {
   }).catch(function (e) {
     console.error(e);
   });
-  };
+  }
 
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function() {
       showModal(pokemon);
       
     });
-  };
+  }
 
   //Modal
   function showModal(pokemon) {
@@ -126,16 +126,16 @@ let pokemonRepository = (function () {
     modalContent.appendChild(modalHeader);
     modalContent.appendChild(modalBody);
     modalContent.appendChild(modalFooter);
-  };
+  }
 
   //search bar
-  searchInput.addEventListener("input", function() {
-    let listPokemon = document.querySelectorAll("li");
+  searchInput.addEventListener('input', function() {
+    let listPokemon = document.querySelectorAll('li');
     let value = searchInput.value.toUpperCase();
 
     listPokemon.forEach(function(pokemon) {
       if (pokemon.innerText.toUpperCase().indexOf(value) < 0) {
-        pokemon.style.display = "none";
+        pokemon.style.display = 'none';
       }        
     });
   });
@@ -162,6 +162,7 @@ function changeColor() {
   let body = document.querySelector('body');
   body.classList.toggle('change-color');
 };
+
 
 
 
