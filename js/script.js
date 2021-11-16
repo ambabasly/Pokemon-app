@@ -161,7 +161,8 @@ pokemonRepository.loadList().then(function() {
 function changeColor() {
   let body = document.querySelector('body');
   body.classList.toggle('change-color');
-};
+}
+
 
 
 
