@@ -13,9 +13,11 @@ h1 {
 .change-color {
   background-color: var(--background-color);
   color: var(--font-color);
+  font-family: var(--font);
 }
 
 .change-color-button {
-  background-color: transparent;
+  background-color: var(--background-color);
   color: var(--font-color);
+  font-family: var(--font);
 }
